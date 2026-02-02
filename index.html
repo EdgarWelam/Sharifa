@@ -24,27 +24,29 @@
             border-radius: 20px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             z-index: 10;
-            max-width: 90%;
+            max-width: 350px;
         }
 
-        img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
+        .profile-img {
+            width: 100%;
+            height: auto;
             border-radius: 15px;
             margin-bottom: 20px;
-            border: 5px solid #ff4d6d;
+            border: 4px solid #ff4d6d;
         }
 
         h1 {
             color: #ff4d6d;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin-bottom: 20px;
         }
 
         .btn-group {
-            height: 50px;
+            height: 60px;
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         button {
@@ -60,12 +62,14 @@
         #yesBtn {
             background-color: #ff4d6d;
             color: white;
+            z-index: 2;
         }
 
         #noBtn {
             background-color: #808080;
             color: white;
             position: absolute;
+            z-index: 1;
         }
 
         .hidden {
@@ -74,14 +78,14 @@
 
         #celebration-msg {
             color: #c9184a;
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
     </style>
 </head>
 <body>
 
     <div class="container" id="mainCard">
-        <img src="https://i.postimg.cc/L5mKpRTM/photo-2026-02-01-23-54-52.jpg" alt="Us">
+        <img class="profile-img" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCADIAMgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1FVWV1hZWmNkZWZnaGlqc3R1dnd4eXqGhc4lYwGJCkqKW2VztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//Z" alt="For Sharie">
         
         <div id="questionArea">
             <h1>Hi Sharie, will you be my Valentine? ❤️</h1>
