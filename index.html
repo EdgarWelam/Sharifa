@@ -1,89 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Be My Valentine ❤️</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      font-family: "Segoe UI", sans-serif;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Sharie ❤️</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #fff0f3;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+        }
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      max-width: 320px;
-    }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            z-index: 10;
+            max-width: 90%;
+        }
 
-    h1 {
-      color: #e63946;
-      margin-bottom: 10px;
-    }
+        img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 5px solid #ff4d6d;
+        }
 
-    p {
-      font-size: 16px;
-      color: #333;
-    }
+        h1 {
+            color: #ff4d6d;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
 
-    button {
-      margin: 10px;
-      padding: 10px 18px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+        .btn-group {
+            height: 50px;
+            position: relative;
+        }
 
-    .yes {
-      background: #e63946;
-      color: white;
-    }
+        button {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-    .no {
-      background: #ccc;
-    }
+        #yesBtn {
+            background-color: #ff4d6d;
+            color: white;
+        }
 
-    #response {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #e63946;
-    }
-  </style>
+        #noBtn {
+            background-color: #808080;
+            color: white;
+            position: absolute;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #celebration-msg {
+            color: #c9184a;
+            font-size: 2rem;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="card">
-    <h1>Hey ❤️</h1>
-    <p>
-      I was wondering…<br>
-      Will you be my Valentine? 💐
-    </p>
+    <div class="container" id="mainCard">
+        <img src="YOUR_IMAGE_LINK_HERE" alt="Us">
+        
+        <div id="questionArea">
+            <h1>Hi Sharie, will you be my Valentine? ❤️</h1>
+            <div class="btn-group">
+                <button id="yesBtn" onclick="celebrate()">YES!</button>
+                <button id="noBtn" onmouseover="dodge()">No</button>
+            </div>
+        </div>
 
-    <button class="yes" onclick="sayYes()">Yes 💖</button>
-    <button class="no" onclick="sayNo()">No 🙈</button>
+        <div id="celebrationArea" class="hidden">
+            <h1 id="celebration-msg">Yay! See you on the 14th, Sharie! 🥰✨</h1>
+            <p style="font-size: 3rem;">🌹💖💍</p>
+        </div>
+    </div>
 
-    <div id="response"></div>
-  </div>
+    <script>
+        function dodge() {
+            const btn = document.getElementById('noBtn');
+            const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+            
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+            btn.style.position = 'fixed';
+        }
 
-  <script>
-    function sayYes() {
-      document.getElementById("response").innerText =
-        "You just made my day ❤️🥰";
-    }
-
-    function sayNo() {
-      document.getElementById("response").innerText =
-        "Are you sure? 😅 Try again!";
-    }
-  </script>
-
+        function celebrate() {
+            document.getElementById('questionArea').classList.add('hidden');
+            document.getElementById('celebrationArea').classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
